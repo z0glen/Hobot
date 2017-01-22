@@ -8,3 +8,6 @@ run the chat5.py file
 <p>use ngrix on port 5000 to access the server non-locally<p>
 <p>run the app.py file<p>
 <p>the program will not run correctly without the server setup<p>
+<p align="center">
+<img src="chatbot.PNG">
+</p>
