@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang = "en">
+   <head>
+		<style>
+			td {
+				padding-right: 8px;
+			}
+			.id {
+				font-weight: bold;
+			}
+	   </style>
+	</head>
+   <body>
+      
+      <h3>
+         <a href = "{{ url_for('show_all') }}">Comments - Flask 
+            SQLAlchemy example</a>
+      </h3>
+      
+      <hr/>
+      {%- for message in get_flashed_messages() %}
+         {{ message }}
+      {%- endfor %}
+		
+      <h3>Messages</h3>
+      
+      <table>
+         <thead>
+            <tr>
+               <th>Id</th>
+               <th>Message</th>
+               <th>Response</th>
+            </tr>
+         </thead>
+         
+         <tbody>
+            {% for message in messages %}
+               <tr>
+                  <td class='id'>{{ message.id }}</td>
+                  <td>{{ message.message }}</td>
+                  <td>{{ message.response }}</td>
+               </tr>
+            {% endfor %}
+         </tbody>
+      </table>
+      
+   </body>
+</html>
